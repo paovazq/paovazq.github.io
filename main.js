@@ -1,3 +1,11 @@
+/* Animation to scroll from Introduction to Contact Me */
+$('#contactme').click(function() {
+  $('html,body').animate({
+      scrollTop: $('#footer').offset().top},
+      'slow');
+});
+
+/* Animation to count up for video statistics. */
 var targetNode = document.getElementById('videos');
 var observer = new MutationObserver(function(){
     if(targetNode.style.display != 'none'){
@@ -25,3 +33,4 @@ var observer = new MutationObserver(function(){
     }
 });
 observer.observe(targetNode, { attributes: true, childList: true });
+
